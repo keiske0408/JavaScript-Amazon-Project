@@ -58,3 +58,20 @@ export function calculateCartQuantity() {
   
   return cartQuantity
 }
+
+export function updateQuantity(productId, newQuantity){
+
+  if (newQuantity <= 0 || newQuantity >= 1000) {
+    alert('Quantity must be at least 1 and less than 1000 ');
+    return; // early return
+  }
+
+  cart.forEach((cartItem) => {
+    if (cartItem.productId == productId){
+      cartItem.quantity = newQuantity;
+    }
+
+   });
+
+   saveToStorage();
+}
