@@ -8,13 +8,22 @@ import "../data/backend-practice.js";
 //import '../data/cart-class.js';
 
 async function loadPage(){
-  await loadProductFetch();
+  try {
+    //throw 'error1'
+    
+    await loadProductFetch();
 
-  const value = await new Promise((resolve) => {
-    loadCart(() => {
-      resolve();
+    const value = await new Promise((resolve, reject) => {
+      loadCart(() => {
+        
+        resolve('value3');
+      });
     });
-  });
+
+  } catch (error) {
+    console.log('Unexpected error. Please try again later.');
+  }
+  
   
   renderCheckoutHeader();
   renderOrderSummary();
