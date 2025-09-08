@@ -7,9 +7,25 @@ import "../data/car.js";
 import "../data/backend-practice.js";
 //import '../data/cart-class.js';
 
+async function loadPage(){
+  await loadProductFetch();
+
+  const value = await new Promise((resolve) => {
+    loadCart(() => {
+      resolve();
+    });
+  });
+  
+  renderCheckoutHeader();
+  renderOrderSummary();
+  renderPaymentSummary();
+
+}
+loadPage();
+/*
 Promise.all([
   loadProductFetch(),
-  
+
   new Promise((resolve) => {
     loadCart(() => {
       resolve();
@@ -21,6 +37,8 @@ Promise.all([
     renderOrderSummary();
     renderPaymentSummary();
 });
+
+*/
 
 /*
 new Promise((resolve) => {
