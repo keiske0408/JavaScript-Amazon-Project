@@ -92,22 +92,22 @@ const supercar1 = new RaceCar({
   acceleration:20
 })
 
-supercar1.go()
-supercar1.displayInfo();
+// supercar1.go()
+// supercar1.displayInfo();
 
-car2.displayInfo();
+// car2.displayInfo();
 
-supercar1.go();
-supercar1.go();
-supercar1.go();
-supercar1.displayInfo();
-supercar1.openTrunk();
-supercar1.displayInfo();
-supercar1.brake();
-supercar1.displayInfo();
+// supercar1.go();
+// supercar1.go();
+// supercar1.go();
+// supercar1.displayInfo();
+// supercar1.openTrunk();
+// supercar1.displayInfo();
+// supercar1.brake();
+// supercar1.displayInfo();
 
-supercar1.brand = 'gas'
-supercar1.displayInfo();
+// supercar1.brand = 'gas'
+// supercar1.displayInfo();
 
 
 
