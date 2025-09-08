@@ -4,7 +4,7 @@ import { renderCheckoutHeader } from "./checkout/checkoutHeader.js";
 import { loadProducts, loadProductFetch } from "../data/products.js";
 import { loadCart } from "../data/cart.js";
 import "../data/car.js";
-import "../data/backend-practice.js";
+//import "../data/backend-practice.js";
 //import '../data/cart-class.js';
 
 async function loadPage(){
